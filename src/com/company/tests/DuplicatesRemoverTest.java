@@ -1,7 +1,7 @@
 package com.company.tests;
 
-import com.company.duplicateRemover.DuplicatesRemover;
 import com.company.Main;
+import com.company.duplicateRemover.DuplicatesRemover;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -14,7 +14,7 @@ import static org.junit.Assert.assertEquals;
 public class DuplicatesRemoverTest extends Main {
 
     @Test
-    public void shouldReturnListWithoutDuplicates() {
+    public void shouldReturnTwoElementsListWithoutDuplicates() {
 
         //given
         List<String> list = new ArrayList<>();
@@ -126,7 +126,7 @@ public class DuplicatesRemoverTest extends Main {
 
 
     @Test
-    public void shouldReturnListWithoutDuplicates1(){
+    public void shouldReturnListWithoutDuplicates() {
         //given
         List<String> list = new ArrayList<>();
         list.add("a");
@@ -140,7 +140,7 @@ public class DuplicatesRemoverTest extends Main {
         DuplicatesRemover.removeDuplicates(list);
 
         //then
-        assertEquals(Arrays.asList("b","c","d","a"), list);
+        assertEquals(Arrays.asList("b", "c", "d", "a"), list);
 
 
     }

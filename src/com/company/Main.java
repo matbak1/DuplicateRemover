@@ -2,7 +2,7 @@ package com.company;
 
 import com.company.duplicateRemover.DuplicatesRemover;
 
-import java.util.*;
+import java.util.ArrayList;
 
 public class Main {
 
@@ -14,7 +14,7 @@ public class Main {
         list.add("a");
 
         System.out.println("Original list");
-        for (String s: list){
+        for (String s : list) {
             System.out.print(s);
         }
         System.out.println();
@@ -22,23 +22,12 @@ public class Main {
         DuplicatesRemover.removeDuplicates(list);
 
         System.out.println("List without duplicates");
-        for (String s: list){
+        for (String s : list) {
             System.out.print(s);
         }
 
 
-
-
-
-
-
     }
-
-
-
-
-
-
 
 
 }

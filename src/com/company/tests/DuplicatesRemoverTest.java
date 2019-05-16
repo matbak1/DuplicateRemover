@@ -35,6 +35,15 @@ public class DuplicatesRemoverTest extends Main {
         //given
         List<String> list = new ArrayList<>();
 
+        addElementsToList(list);
+        //when
+        DuplicatesRemover.removeDuplicates(list);
+
+        //then
+        assertEquals(Arrays.asList("a", "b", "c", "d", "e", "f", "g"), list);
+    }
+
+    private void addElementsToList(List<String> list) {
         for (int i = 0; i < 10000000; i++) {
             list.add("a");
             list.add("b");
@@ -44,11 +53,6 @@ public class DuplicatesRemoverTest extends Main {
             list.add("f");
             list.add("g");
         }
-        //when
-        DuplicatesRemover.removeDuplicates(list);
-
-        //then
-        assertEquals(Arrays.asList("a", "b", "c", "d", "e", "f", "g"), list);
     }
 
 
@@ -58,15 +62,7 @@ public class DuplicatesRemoverTest extends Main {
         //given
         List<String> list = new ArrayList<>();
 
-        for (int i = 0; i < 10000000; i++) {
-            list.add("a");
-            list.add("b");
-            list.add("c");
-            list.add("d");
-            list.add("e");
-            list.add("f");
-            list.add("g");
-        }
+        addElementsToList(list);
         //when
         DuplicatesRemover.removeDuplicatesUsingSet(list);
 
@@ -80,15 +76,7 @@ public class DuplicatesRemoverTest extends Main {
         //given
         List<String> list = new ArrayList<>();
 
-        for (int i = 0; i < 10000000; i++) {
-            list.add("a");
-            list.add("b");
-            list.add("c");
-            list.add("d");
-            list.add("e");
-            list.add("f");
-            list.add("g");
-        }
+        addElementsToList(list);
         //when
         DuplicatesRemover.removeDuplicatesUsingStream(list);
 
